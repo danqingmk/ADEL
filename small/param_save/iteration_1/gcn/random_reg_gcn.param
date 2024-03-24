@@ -1,0 +1,1 @@
+{'l2': 1e-08, 'lr': 0.0031622776601683794, 'gcn_hidden_feats': (128, 128), 'classifier_hidden_feats': 64}

@@ -1,0 +1,1 @@
+{'max_depth': 8, 'max_features': 4, 'min_impurity_decrease': 0.0070927429567963305, 'min_samples_leaf': 2, 'n_estimators': 3}

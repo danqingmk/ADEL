@@ -1,0 +1,1 @@
+{'l2': 0, 'lr': 0.0031622776601683794, 'gat_hidden_feats': (128, 128), 'num_heads': (5, 5), 'classifier_hidden_feats': 64}

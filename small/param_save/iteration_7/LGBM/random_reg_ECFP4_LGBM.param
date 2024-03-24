@@ -1,0 +1,1 @@
+{'colsample_bytree': 1.0, 'learning_rate': 0.06596816347781147, 'max_depth': 11, 'num_leaves': 24, 'reg_alpha': 1.2838367993498727, 'reg_lambda': 0.03957458160104298, 'subsample': 1.0}
