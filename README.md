@@ -1,4 +1,4 @@
-# Active-Learning
+# ADEL(Active Deviation Ensemble Learning)
 AL is an active learning-based technique for ultra-large-scale virtual screening
 # Install
 ```
