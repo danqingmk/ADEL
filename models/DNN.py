@@ -224,7 +224,7 @@ def best_model_running(seed, opt_res, data, split_type='random', FP_type='ECFP4'
         if early_stop:
             break
 
-        stopper.load_checkpoint(best_model)
+    stopper.load_checkpoint(best_model)
     if task_type=='cla':
         tr_scores = run_an_eval_epoch(best_model, train_loader, args)
         tr_results = [seed,FP_type, split_type, 'tr',tr_scores['se'], tr_scores['sp'],
