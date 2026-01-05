@@ -1,0 +1,260 @@
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation &mdash; ADEL v1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=e160b93e"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorial" href="tutorial.html" />
+    <link rel="prev" title="ADEL" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ADEL
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#system-requirements">System Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-environment-setup">Python Environment Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#core-dependency-installation">Core Dependency Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rdkit">1. RDKit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pytorch">2. PyTorch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deep-graph-library-dgl">3. Deep Graph Library (DGL)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-required-packages">4. Additional Required Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cuda-compatibility-issues">CUDA Compatibility Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#memory-issues">Memory Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#package-dependency-conflicts">Package Dependency Conflicts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_guide.html">Developer Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ADEL</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+    
+    
+
+    
+    
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
+<p>This document outlines the essential requirements for successfully installing and running ADEL.
+ADEL (Active Deviation Ensemble Learning) integrates multiple deep learning and machine learning models, active deviation ensemble strategies, and large-scale virtual screening optimization methods, tailored for ultra-large-scale drug discovery applications.</p>
+<section id="system-requirements">
+<h2>System Requirements<a class="headerlink" href="#system-requirements" title="Link to this heading"></a></h2>
+<p>To efficiently run ADEL, your system should meet the following specifications:</p>
+<ul class="simple">
+<li><p><strong>CPU</strong>: Multi-core processor recommended for parallel processing tasks</p></li>
+<li><p><strong>RAM</strong>: Minimum 16GB, 32GB or more recommended for handling large datasets</p></li>
+<li><p><strong>GPU</strong>: CUDA-compatible GPU (optional, but recommended for deep learning models)</p></li>
+<li><p><strong>CUDA</strong>: Version 11.3 or higher (required for GPU acceleration)</p></li>
+<li><p><strong>Disk Space</strong>: At least 10GB for software and its dependencies</p></li>
+</ul>
+</section>
+<section id="python-environment-setup">
+<h2>Python Environment Setup<a class="headerlink" href="#python-environment-setup" title="Link to this heading"></a></h2>
+<p>ADEL requires <strong>Python 3.8</strong>. It is strongly recommended to use <strong>Conda</strong> to manage your environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a new conda environment</span>
+<span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">adel_env</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.8</span>
+
+<span class="c1"># Activate the environment</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">adel_env</span>
+</pre></div>
+</div>
+</section>
+<section id="core-dependency-installation">
+<h2>Core Dependency Installation<a class="headerlink" href="#core-dependency-installation" title="Link to this heading"></a></h2>
+<p>The following core dependencies must be installed in the specified order:</p>
+<section id="rdkit">
+<h3>1. RDKit<a class="headerlink" href="#rdkit" title="Link to this heading"></a></h3>
+<p>RDKit is essential for molecular structure processing and generating molecular descriptors:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">rdkit</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+</pre></div>
+</div>
+</section>
+<section id="pytorch">
+<h3>2. PyTorch<a class="headerlink" href="#pytorch" title="Link to this heading"></a></h3>
+<p>PyaiVS uses <strong>PyTorch 1.12.1</strong> for deep learning models:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">torch</span><span class="o">==</span><span class="mf">1.12.1</span><span class="o">+</span><span class="n">cu113</span> <span class="n">torchvision</span><span class="o">==</span><span class="mf">0.13.1</span><span class="o">+</span><span class="n">cu113</span> <span class="o">--</span><span class="n">torchaudio</span><span class="o">==</span><span class="mf">0.12.1</span>
+</pre></div>
+</div>
+</section>
+<section id="deep-graph-library-dgl">
+<h3>3. Deep Graph Library (DGL)<a class="headerlink" href="#deep-graph-library-dgl" title="Link to this heading"></a></h3>
+<p>DGL is required for graph-based models:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">dgllife</span>
+</pre></div>
+</div>
+</section>
+<section id="additional-required-packages">
+<h3>4. Additional Required Packages<a class="headerlink" href="#additional-required-packages" title="Link to this heading"></a></h3>
+<p>Install these extra packages required by different ADEL components:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">xgboost</span> <span class="n">hyperopt</span> <span class="n">pandas</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span> <span class="n">numpy</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span>
+</pre></div>
+</div>
+<p>These dependencies support various machine learning algorithms used in the package:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Model Type</p></th>
+<th class="head"><p>Required Packages</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Machine Learning</p></td>
+<td><p>scikit-learn, xgboost</p></td>
+</tr>
+<tr class="row-odd"><td><p>Deep Learning</p></td>
+<td><p>pytorch, dgl</p></td>
+</tr>
+<tr class="row-even"><td><p>Hyperparameter Opt.</p></td>
+<td><p>hyperopt</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data Processing</p></td>
+<td><p>pandas, numpy</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<section id="cuda-compatibility-issues">
+<h3>CUDA Compatibility Issues<a class="headerlink" href="#cuda-compatibility-issues" title="Link to this heading"></a></h3>
+<p>If you encounter CUDA-related errors:</p>
+<ul>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code> to verify your CUDA version</p></li>
+<li><p>Ensure the correct CUDA version of PyTorch is installed</p></li>
+<li><p>Set the appropriate environment variables:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;PYTHONHASHSEED&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;CUDA_LAUNCH_BLOCKING&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;CUBLAS_WORKSPACE_CONFIG&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;:16:8&quot;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="memory-issues">
+<h3>Memory Issues<a class="headerlink" href="#memory-issues" title="Link to this heading"></a></h3>
+<p>If you run into memory errors when handling large datasets or complex models:</p>
+<ul class="simple">
+<li><p>Reduce batch size in model configuration</p></li>
+<li><p>Use CPU mode if GPU memory is limited</p></li>
+<li><p>Process datasets in chunks whenever possible</p></li>
+</ul>
+<p>Example of specifying CPU device:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">models</span><span class="o">/</span><span class="n">ml_screen</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">file</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">database</span><span class="o">/</span><span class="n">databae</span><span class="o">.</span><span class="n">csv</span> <span class="o">--</span><span class="n">cpus</span> <span class="mi">10</span> <span class="o">--</span><span class="n">out_dir</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span> <span class="o">--</span><span class="n">models</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">small</span><span class="o">/</span><span class="n">model_save</span><span class="o">/</span><span class="n">iteration_1</span><span class="o">/</span><span class="n">SVM</span><span class="o">/</span><span class="n">random_reg_ECFP4_1_SVM_bestModel</span><span class="o">.</span><span class="n">pkl</span>
+</pre></div>
+</div>
+</section>
+<section id="package-dependency-conflicts">
+<h3>Package Dependency Conflicts<a class="headerlink" href="#package-dependency-conflicts" title="Link to this heading"></a></h3>
+<p>If you face dependency conflicts:</p>
+<ul class="simple">
+<li><p>Create a new Conda environment</p></li>
+<li><p>Install dependencies in the exact order listed above</p></li>
+<li><p>Avoid mixing conda and pip installs for the same package</p></li>
+</ul>
+</section>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<p>After installation, refer to the <strong>Tutorial</strong> for your first virtual screening task using ADEL.</p>
+</section>
+</section>
+
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="ADEL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorial.html" class="btn btn-neutral float-right" title="Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, z.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
