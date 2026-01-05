@@ -1,0 +1,32 @@
+{# 继承默认模板 #}
+{% extends "!page.html" %}
+
+{# 先保留原有的breadcrumbs（面包屑/View page source区域），再插入Logo #}
+{% block body %}
+    {# 保留原页面的顶部区域（包含View page source） #}
+    <div class="rst-content">
+        {# 面包屑/View page source 区域（原样保留） #}
+        <div role="navigation" aria-label="breadcrumbs navigation">
+            {% block breadcrumbs %}
+                {{ super() }}
+            {% endblock %}
+        </div>
+
+        {# 核心：Logo区域（移到View page source下方，放大尺寸） #}
+        <div style="text-align: center; margin: 40px 0;  /* 上下间距40px，和PyaiVS一致 */">
+            <img src="{{ pathto('_static/ADEL_logo.png', 1) }}" 
+                 alt="ADEL Logo" 
+                 style="width: 600px; max-width: 100%;"/>  {# 宽度放大到600px，自适应屏幕 #}
+        </div>
+
+        {# 保留原有的文档内容（标题、目录等） #}
+        <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            {% block document %}
+                {{ super() }}
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}
+
+{# 清空原content块（避免重复渲染） #}
+{% block content %}{% endblock %}

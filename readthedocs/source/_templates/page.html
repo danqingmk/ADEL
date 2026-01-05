@@ -1,0 +1,17 @@
+{# 继承默认模板 #}
+{% extends "!page.html" %}
+
+{# 重写body块，仅首页显示Logo #}
+{% block body %}
+    {# 关键：判断当前页面是否为首页（index），仅首页插入Logo #}
+    {% if pagename == 'index' %}
+        <div style="text-align: center; margin: 40px 0;">
+            <img src="{{ pathto('_static/ADEL_logo.png', 1) }}" 
+                 alt="ADEL Logo" 
+                 style="width: 600px; max-width: 100%;"/>
+        </div>
+    {% endif %}
+
+    {# 保留原页面所有内容 #}
+    {{ super() }}
+{% endblock %}
