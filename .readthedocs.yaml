@@ -4,7 +4,5 @@ build:
   tools:
     python: "3.9"
 sphinx:
-  configuration: source/conf.py
-python:
-  install:
-    - requirements: source/requirements.txt
+  configuration: readthedocs/source/conf.py
+
