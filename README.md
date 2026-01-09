@@ -28,7 +28,8 @@ The results predicted by each model were merged and the molecules were selected 
 After several rounds of iterative process, the molecules with the highest prediction scores selected in the final round are then molecularly docked using schrodinger software to obtain potentially active molecules.
 
 ## Documentation and Support
-For advanced usage, detailed parameter descriptions, and debugging tips, please refer to the full documentation on Read the Docs: 👉
+
+For advanced usage, detailed parameter descriptions, and debugging tips, please refer to the full documentation on Read the Docs: 👉[ADEL Documentation](https://adel-ulvs.readthedocs.io/en/latest/index.html)
 
 If you encounter any issues or have questions, feel free to reach out:📧wangmukuo@163.com
 
