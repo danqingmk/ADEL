@@ -3,8 +3,10 @@ build:
   os: ubuntu-22.04
   tools:
     python: "3.9"
+  commands:
+    - cp -r readthedocs/build/html $READTHEDOCS_OUTPUT/html
 sphinx:
   configuration: readthedocs/source/conf.py
-build_dir: readthedocs/build
+
 python:
   install: []
