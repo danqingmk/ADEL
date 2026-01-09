@@ -3,8 +3,10 @@ build:
   os: ubuntu-22.04
   tools:
     python: "3.9"
+  commands:
+    - cd readthedocs/source
+    - python -m sphinx -T -b html -d ../build/doctrees -D language=en . $READTHEDOCS_OUTPUT/html
 sphinx:
   configuration: readthedocs/source/conf.py
-  builder: html
-  source_dir: readthedocs/source
+
 
