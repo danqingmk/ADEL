@@ -5,7 +5,6 @@ build:
     python: "3.9"
 sphinx:
   configuration: readthedocs/source/conf.py
-html:
-  directory: readthedocs/build/html
+build_dir: readthedocs/build
 python:
   install: []
