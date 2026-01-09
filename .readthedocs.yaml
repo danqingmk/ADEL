@@ -3,9 +3,10 @@ build:
   os: ubuntu-22.04
   tools:
     python: "3.9"
+html:
+  directory: readthedocs/build/html
+python:
+  install: []
 sphinx:
-  configuration: readthedocs/source/conf.py
   builder: html
-  options:
-    - "-c readthedocs/source"
 
