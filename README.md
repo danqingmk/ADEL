@@ -26,3 +26,10 @@ python /home/models/ml_screen.py --file /home/database/databae.csv --cpus 10 --o
 The results predicted by each model were merged and the molecules were selected to expand the training set based on a selection strategy (i.e., highest prediction scores with maximum uncertainty) using std.py and extra.py.This is followed by multiple rounds of a similar iterative process.
 ## Last step
 After several rounds of iterative process, the molecules with the highest prediction scores selected in the final round are then molecularly docked using schrodinger software to obtain potentially active molecules.
+
+## Documentation and Support
+For advanced usage, detailed parameter descriptions, and debugging tips, please refer to the full documentation on Read the Docs: 👉
+
+If you encounter any issues or have questions, feel free to reach out:📧wangmukuo@163.com
+
+We welcome feedback, feature requests, and contributions from the community!
