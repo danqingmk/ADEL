@@ -5,6 +5,4 @@ build:
     python: "3.9"
 sphinx:
   configuration: readthedocs/source/conf.py
-conda:
-  environment: readthedocs/environment.yml
 
